@@ -30,7 +30,7 @@
 
 <=== subslide ===>
 
-![Download Android Studio](slides/android-studio/android_studio_download.jpg)
+![Download Android Studio](android_studio_download.jpg)
 
 <=== slide ===>
 
@@ -69,7 +69,7 @@ project                           |     workspace
 
 ##### Project Structure
 
-![Android Studio project structure](slides/android-studio/project_structure.png)
+![Android Studio project structure](project_structure.png)
 
 <=== subslide ===>
 
@@ -142,6 +142,12 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 ```
+
+<=== subslide ===>
+
+Android Plugin DSL Reference
+
+[http://google.github.io/android-gradle-dsl/current/](http://google.github.io/android-gradle-dsl/current/)
 
 <=== slide ===>
 
@@ -271,24 +277,109 @@ dependencies {
 
 ### What is Android Studio indeed?
 
-- <p class="fragment">Editor: IntelliJ Idea</p>
+- <p class="fragment">IntelliJ Idea</p>
 - <p class="fragment">Android plugin for IntelliJ Idea</p>
 - <p class="fragment">Android plugin for Gradle</p>
 - <p class="fragment">NDK support: CLion for C/C++</p>
 
 <=== slide ===>
 
+##### IntelliJ Idea
+
+![Android Studio](android_studio.png)
+
+<=== subslide ===>
+
+Shortcuts
+
+- Mac OS X
+- Emacs
+- Visual Studio
+- Eclipse
+- ......
+
+<=== subslide ===>
+
+| Description | Shortcut |
+|-------------|----------|
+| Search everywhere | Double Shift |
+| Go to class | Ctrl+N |
+| Go to file  | Ctrl+Shift+N |
+| Find action | Ctrl+Shift+A |
+
+<=== subslide ===>
+
+Theme
+
+- Darcula
+- IntelliJ
+- Windows
+- customization
+
+<=== slide ===>
+
+##### Android plugin for Gradle
+<br/>
+> Gradle is an open source build automation system that builds upon the concepts of Apache Ant and Apache Maven and introduces a Groovy-based domain-specific language (DSL) instead of the XML form used by Apache Maven of declaring the project configuration.
+
+<=== subslide ===>
+
+Where is android plugin?
+
+```groovy
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+```
+
+[http://jcenter.bintray.com/com/android/tools/build/gradle/](http://jcenter.bintray.com/com/android/tools/build/gradle/)
+
+<=== subslide ===>
+
+Compile in command line:
+
+```bash
+$ gradle tasks
+$ gradle app:assemble   # all variants compiled
+```
+
+<=== slide ===>
+
 ### Features
 
-- <p class="fragment">Runtime Monitors</p>
-- <p class="fragment">Resource preview - fold strings, preview color and images</p>
-- <p class="fragment">Instant Run</p>
-- <p class="fragment">Build Variants</p>
-- <p class="fragment">Debug</p>
+- <p class="fragment">Runtime monitors</p>
+- <p class="fragment">Resource preview</p>
+- <p class="fragment">Instant run</p>
+
+<=== slide ===>
+
+Runtime monitors
+
+![Runtime monitors](runtime_monitors.png)
+
+<=== subslide ===>
+
+Resource preview
+
+![Resource preview](resource_preview.png)
+
+<=== subslide ===>
+
+Resource preview (continue)
+
+![String fold](string_fold.png)
+
+<=== subslide ===>
+
+Instant Run
 
 <=== slide ===>
 
 ### Problems
+- <p class="fragment">Can not resolve symbol...</p>
+- <p class="fragment">Computer upgrade?</p>
 
 <=== slide ===>
 
