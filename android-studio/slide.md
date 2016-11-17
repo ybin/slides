@@ -143,12 +143,6 @@ task clean(type: Delete) {
 }
 ```
 
-<=== subslide ===>
-
-Android Plugin DSL Reference
-
-[http://google.github.io/android-gradle-dsl/current/](http://google.github.io/android-gradle-dsl/current/)
-
 <=== slide ===>
 
 `module` &nbsp; <small>vs</small> &nbsp; `project`
@@ -203,6 +197,12 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 ```
+
+<=== subslide ===>
+
+Android Plugin DSL Reference
+
+[http://google.github.io/android-gradle-dsl/current/](http://google.github.io/android-gradle-dsl/current/)
 
 <=== slide ===>
 
@@ -327,9 +327,12 @@ Theme
 Where is android plugin?
 
 ```groovy
-allprojects {
+buildscript {
     repositories {
         jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
     }
 }
 ```
